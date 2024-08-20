@@ -365,7 +365,7 @@ const CreateClusterDialog = ({ onClose }: Props) => {
           <Typography fontSize={14}>
             Note:{' '}
             <span style={{ fontSize: 14, opacity: 0.6 }}>
-              Control Center will install missing packages and make changes in your system configurations. To review
+              Launcher will install missing packages and make changes in your system configurations. To review
               these changes you can checkout the script{' '}
             </span>
             <a
@@ -387,7 +387,7 @@ const CreateClusterDialog = ({ onClose }: Props) => {
             Note:{' '}
             <span style={{ fontSize: 14, opacity: 0.6 }}>
               The configuration may fail the 1st time you are trying to run it. You can try, running the configuration
-              wizard again, or relaunching the control center app, or reboot your PC. This is because some changes
+              wizard again, or relaunching the launcher app, or reboot your PC. This is because some changes
               require you to perform these actions. If you still face the same issue then report it.
             </span>
           </Typography>

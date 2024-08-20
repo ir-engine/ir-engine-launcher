@@ -167,7 +167,7 @@ class BaseCluster {
           if (preRequisitesConfigured == false) {
             status = {
               ...engineItem,
-              detail: 'Ethereal Engine required apps not configured',
+              detail: 'Infinite Reality Engine required apps not configured',
               status: AppStatus.NotConfigured
             }
           } else if (engineItem.checkCommand) {

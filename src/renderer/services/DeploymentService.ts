@@ -311,7 +311,7 @@ export const DeploymentService = {
     } catch (error) {
       console.error(error)
 
-      enqueueSnackbar('Failed to configure Ethereal Engine. Please check logs.', {
+      enqueueSnackbar('Failed to configure Infinite Reality Engine. Please check logs.', {
         variant: 'error'
       })
     }

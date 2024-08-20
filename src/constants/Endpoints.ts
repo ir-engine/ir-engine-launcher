@@ -1,40 +1,40 @@
 const Endpoints = {
   ALLOW_CERTIFICATES: [
-    'local.etherealengine.org', // Client
-    'api-local.etherealengine.org', // API Server
-    'instanceserver-local.etherealengine.org', // Instance Server
+    'local.ir-engine.org', // Client
+    'api-local.ir-engine.org', // API Server
+    'instanceserver-local.ir-engine.org', // Instance Server
     'localhost:9000', // MinIO
     'localhost:10443' // Microk8s Dashboard
   ],
   MYSQL_PORT: 3304,
-  DEFAULT_ENGINE_FOLDER: 'etherealengine',
-  DEFAULT_OPS_FOLDER: 'etherealengine-ops',
+  DEFAULT_ENGINE_FOLDER: 'ir-engine',
+  DEFAULT_OPS_FOLDER: 'ir-engine-ops',
   Urls: {
-    HOST: 'https://etherealengine.org',
-    CLIENT_HOST: 'https://local.etherealengine.org',
-    API_HOST: 'https://api-local.etherealengine.org',
-    INSTANCE_HOST: 'https://instanceserver-local.etherealengine.org',
+    HOST: 'https://ir-engine.org',
+    CLIENT_HOST: 'https://local.ir-engine.org',
+    API_HOST: 'https://api-local.ir-engine.org',
+    INSTANCE_HOST: 'https://instanceserver-local.ir-engine.org',
     MINIO_HOST: 'https://localhost:9000',
-    ADMIN_PORTAL: 'https://local.etherealengine.org/admin',
-    LOGIN_PAGE: 'https://local.etherealengine.org/',
+    ADMIN_PORTAL: 'https://local.ir-engine.org/admin',
+    LOGIN_PAGE: 'https://local.ir-engine.org/',
     LAUNCH_PAGE: (host: string) => `${host.startsWith('https') ? '' : 'https://'}${host}/location/apartment`,
-    ENGINE_ENV_DEFAULT: 'https://raw.githubusercontent.com/etherealengine/etherealengine/dev/.env.local.default',
+    ENGINE_ENV_DEFAULT: 'https://raw.githubusercontent.com/ir-engine/ir-engine/dev/.env.local.default',
     MINIKUBE_LINUX_SCRIPT:
-      'https://raw.githubusercontent.com/etherealengine/etherealengine-control-center/master/assets/scripts/configure-minikube-linux.sh',
+      'https://raw.githubusercontent.com/ir-engine/ir-engine/launcher/master/assets/scripts/configure-minikube-linux.sh',
     MICROK8S_LINUX_SCRIPT:
-      'https://raw.githubusercontent.com/etherealengine/etherealengine-control-center/master/assets/scripts/configure-microk8s-linux.sh',
+      'https://raw.githubusercontent.com/ir-engine/ir-engine/launcher/master/assets/scripts/configure-microk8s-linux.sh',
     MICROK8S_WINDOWS_SCRIPT:
-      'https://raw.githubusercontent.com/etherealengine/etherealengine-control-center/master/assets/scripts/configure-microk8s-windows.ps1',
+      'https://raw.githubusercontent.com/ir-engine/ir-engine/launcher/master/assets/scripts/configure-microk8s-windows.ps1',
     MINIKUBE_VALUES_TEMPLATE:
-      'https://raw.githubusercontent.com/EtherealEngine/ethereal-engine-ops/master/configs/local.minikube.template.values.yaml',
+      'https://raw.githubusercontent.com/ir-engine/ir-engine-ops/master/configs/local.minikube.template.values.yaml',
     MICROK8S_VALUES_TEMPLATE:
-      'https://raw.githubusercontent.com/EtherealEngine/ethereal-engine-ops/master/configs/local.microk8s.template.values.yaml',
+      'https://raw.githubusercontent.com/ir-engine/ir-engine-ops/master/configs/local.microk8s.template.values.yaml',
     RIPPLED_CLI_DOCS: 'https://xrpl.org/commandline-usage.html',
     IPFS_VALUES_TEMPLATE:
-      'https://raw.githubusercontent.com/EtherealEngine/ethereal-engine-ops/master/ipfs/values.yaml',
+      'https://raw.githubusercontent.com/ir-engine/ir-engine-ops/master/ipfs/values.yaml',
     MICROK8S_REGISTRY_CATALOG: 'http://localhost:32000/v2/_catalog',
     MICROK8S_WINDOWS_REGISTRY_CATALOG: 'http://microk8s.registry:32000/v2/_catalog',
-    SUPPORT_GITHUB: 'https://github.com/EtherealEngine/etherealengine-control-center/issues',
+    SUPPORT_GITHUB: 'https://github.com/ir-engine/ir-engine-launcher/issues',
     SUPPORT_DISCORD: 'https://discord.gg/xrf'
   },
   Paths: {

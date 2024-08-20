@@ -91,7 +91,7 @@ const ConfigsView = ({ localConfigs, onChange, sx }: Props) => {
         />
         <InfoTooltip
           ml={1}
-          message="Folder of Ethereal Engine source code. This folder should be inside `Home` directory."
+          message="Folder of Infinite Reality Engine source code. This folder should be inside `Home` directory."
         />
       </Box>
       <Box display="flex" width="100%" alignItems="center">
@@ -117,7 +117,7 @@ const ConfigsView = ({ localConfigs, onChange, sx }: Props) => {
             )
           }}
         />
-        <InfoTooltip ml={1} message="Folder of Ethereal Engine OPS source code." />
+        <InfoTooltip ml={1} message="Folder of Infinite Reality Engine OPS source code." />
       </Box>
       {/* <FormControlLabel
         labelPlacement="start"

@@ -1,4 +1,4 @@
-# Ethereal Engine Control Center - Tutorials
+# Infinite Reality Engine Launcher - Tutorials
 
 ## 1. Getting Started
 

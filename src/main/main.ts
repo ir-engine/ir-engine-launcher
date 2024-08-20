@@ -128,8 +128,8 @@ const createWindow = async () => {
     autoUpdater.autoDownload = false
     autoUpdater.setFeedURL({
       provider: 'github',
-      owner: 'etherealengine',
-      repo: 'etherealengine-control-center'
+      owner: 'ir-engine',
+      repo: 'ir-engine-launcher'
     })
     autoUpdater.logger = log
   }

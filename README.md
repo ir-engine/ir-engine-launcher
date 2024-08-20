@@ -5,15 +5,15 @@ Want to build the spatial web on your website? Looking for a place to start? Run
 **The Infinite Reality Engine Launcher is a self-contained Metaverse world in a box.** 
 Take what you need or launch the full stack. iR Engine Launcher is a desktop app to manage a metaverse cluster.
 
-We know it's been complicated to build with #EtherealEngine and we've made this tool to give the community easy access to the engine for development and creation. The full Kubernetes cluster can run on Windows and any Debian Linux distro with at least 16 GB of ram.
+We know it's been complicated to build with #iREngine and we've made this tool to give the community easy access to the engine for development and creation. The full Kubernetes cluster can run on Windows and any Debian Linux distro with at least 16 GB of ram.
 
 We would love to see your creations and invite you all to come build with us. We've got a long backlog and need your help to build the Open Metaverse. Come build with us!
 
-### [DOWNLOAD HERE](https://github.com/etherealengine/ir-engine-launcher/releases)
+### [DOWNLOAD HERE](https://github.com/ir-engine/ir-engine-launcher/releases)
 
 https://user-images.githubusercontent.com/10975502/168554732-86a202b6-053c-4588-8153-cd2c9c2771d5.mp4
 
-### [DOWNLOAD HERE](https://github.com/etherealengine/ir-engine-launcher/releases)
+### [DOWNLOAD HERE](https://github.com/ir-engine/ir-engine-launcher/releases)
 
 ## Getting Started
 
@@ -23,7 +23,7 @@ Additionally, there are iR Engine Launcher video tutorials which you can find [h
 
 ## Install Released
 
-[Download latest version of the iR Engine Launcher app from here](https://github.com/etherealengine/etherealengine-control-center/releases).
+[Download latest version of the iR Engine Launcher app from here](https://github.com/ir-engine/ir-engine-launcher/releases).
 
 1. (Windows) Directly download the .exe file.
 2. (Linux) For AppImage: Once downloaded, right click and go to **Properties**. In **Permissions** tab check 'Allow executing file as program'.
@@ -109,9 +109,9 @@ If you face an issue please report it to [Issues](https://github.com/canonical/m
 
 1. Non-UI logs found at following path:
   
-    - on Linux: `~/.config/etherealengine-control-center/logs/main.log`
-    - on macOS: `~/Library/Logs/etherealengine-control-center/main.log`
-    - on Windows: `%USERPROFILE%\AppData\Roaming\etherealengine-control-center\logs\main.log`
+    - on Linux: `~/.config/ir-engine-launcher/logs/main.log`
+    - on macOS: `~/Library/Logs/ir-engine-launcher/main.log`
+    - on Windows: `%USERPROFILE%\AppData\Roaming\ir-engine-launcher\logs\main.log`
 
 2. UI logs found using download button in app as shown in below image.
 ![LogsDownload](https://user-images.githubusercontent.com/10975502/219317443-5cdf19fd-1e60-4907-a124-56cec72bb633.jpg)
@@ -120,7 +120,7 @@ If you face an issue please report it to [Issues](https://github.com/canonical/m
 
 Clone this repository:
 ```bash
-git clone https://github.com/etherealengine/ir-engine-launcher.git ir-engine-launcher
+git clone https://github.com/ir-engine/ir-engine-launcher.git ir-engine-launcher
 ```
 Go inside the folder:
 ```bash
@@ -158,7 +158,7 @@ We are always hiring talented people who want to be leaders in what is to come. 
 **Your own sandbox in the Metaverse. Take what you need, or launch the full stack.
 iR Engine Launcher is a desktop app for managing an iR Engine cluster.**
 
-Electron based Ethereal Engine Server Cluster Creator app
+Electron based Infinite Reality Engine Server Cluster Creator app
 
 - Ability to fully manage an on premises server.
 - Electron K8S Cluster Creator and Manager App
@@ -168,6 +168,6 @@ Electron based Ethereal Engine Server Cluster Creator app
 - Multiple electron apps with same k8s control plane
 - Benchmark tool - minimum specs of 4 CPU cores and 16-24GB of ram.
 
-We [Ethereal Engine](https://github.com/etherealengine) believe that the Metaverse, Web AR, VR. XR should be easy.
+We [iR Engine](https://github.com/ir-engine) believe that the Metaverse, Web AR, VR. XR should be easy.
 
-### [Sponsorship](https://opencollective.com/etherealengine) [![Open Collective](https://opencollective.com/etherealengine/tiers/badge.svg)](https://opencollective.com/etherealengine)
+### [Sponsorship](https://opencollective.com/ir-engine) [![Open Collective](https://opencollective.com/ir-engine/tiers/badge.svg)](https://opencollective.com/ir-engine)

@@ -180,7 +180,7 @@ const SettingsDialog = ({ onClose }: Props) => {
                 <Box>
                   <Box sx={{ display: 'flex', mr: 6, mb: 2, alignItems: 'center', flexDirection: 'row' }}>
                     <Box sx={{ height: 45, mr: 0.7 }} component="img" src={logo} />
-                    <Typography variant="h6">Control Center</Typography>
+                    <Typography variant="h6">Launcher</Typography>
                   </Box>
                   <DialogContentText variant="button">App Version: {appVersion}</DialogContentText>
                 </Box>

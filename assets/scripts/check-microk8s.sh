@@ -90,7 +90,7 @@ echo "$PASSWORD" | sudo -S microk8s config > $microk8sConfig
 
 echo "Exported microk8s kubeconfig to: $microk8sConfig"
 
-kubectl config rename-context microk8s etherealengine-microk8s --kubeconfig="$microk8sConfig"
+kubectl config rename-context microk8s ir-engine-microk8s --kubeconfig="$microk8sConfig"
 
 # Check if .bashrc file exists
 if [[ ! -f ~/.bashrc ]]; then
@@ -116,7 +116,7 @@ else
     echo "config-microk8s entry added in KUBECONFIG of ~/.bashrc"
 fi
 
-kubectl config use-context etherealengine-microk8s
+kubectl config use-context ir-engine-microk8s
 
 MICROK8S_VERSION=$(echo "$PASSWORD" | sudo -S microk8s version)
 echo "microk8s version is $MICROK8S_VERSION"

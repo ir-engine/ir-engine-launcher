@@ -36,7 +36,7 @@ function Test-FileLock {
 # Parameters
 #===========
 
-Write-Host "Checking hostfile for etherealengine entries";
+Write-Host "Checking hostfile for iR engine entries";
 
 $EXITCODE = 0;
 $IS_READONLY = $false;
@@ -74,20 +74,20 @@ try {
             }
         }
     
-        if ($hostFileContent -like "*local.etherealengine.org*") {
-            if ($hostFileContent -like "*$wslIp local.etherealengine.org*") {
-                Write-Host "*.etherealengine.org host entry exists";
+        if ($hostFileContent -like "*local.ir-engine.org*") {
+            if ($hostFileContent -like "*$wslIp local.ir-engine.org*") {
+                Write-Host "*.ir-engine.org host entry exists";
             }
             else {
-                Write-Host "*.etherealengine.org host entry outdated";
+                Write-Host "*.ir-engine.org host entry outdated";
     
                 $EXITCODE = 1
                 if ($IS_READONLY -eq $false) {
                     #Ref: https://shellgeek.com/read-file-line-by-line-in-powershell/
                     #Ref: https://stackoverflow.com/a/21970035
                     $updatedContent = [System.IO.File]::ReadAllLines($hostFilePath);
-                    $linenumber = $updatedContent | select-string "local.etherealengine.org";
-                    $updatedContent[$linenumber.LineNumber - 1] = "$wslIp local.etherealengine.org api-local.etherealengine.org instanceserver-local.etherealengine.org 00000.instanceserver-local.etherealengine.org 00001.instanceserver-local.etherealengine.org 00002.instanceserver-local.etherealengine.org 00003.instanceserver-local.etherealengine.org";
+                    $linenumber = $updatedContent | select-string "local.ir-engine.org";
+                    $updatedContent[$linenumber.LineNumber - 1] = "$wslIp local.ir-engine.org api-local.ir-engine.org instanceserver-local.ir-engine.org 00000.instanceserver-local.ir-engine.org 00001.instanceserver-local.ir-engine.org 00002.instanceserver-local.ir-engine.org 00003.instanceserver-local.ir-engine.org";
 
                     # Added this to avoid file in user error.
                     $fileLocked = Test-FileLock -Path $hostFilePath
@@ -104,11 +104,11 @@ try {
             }
         }
         else {
-            Write-Host "*.etherealengine.org host entry needs to be added";
+            Write-Host "*.ir-engine.org host entry needs to be added";
     
             $EXITCODE = 1
             if ($IS_READONLY -eq $false) {
-                Add-Content -Path $hostFilePath -value "`n$wslIp local.etherealengine.org api-local.etherealengine.org instanceserver-local.etherealengine.org 00000.instanceserver-local.etherealengine.org 00001.instanceserver-local.etherealengine.org 00002.instanceserver-local.etherealengine.org 00003.instanceserver-local.etherealengine.org";
+                Add-Content -Path $hostFilePath -value "`n$wslIp local.ir-engine.org api-local.ir-engine.org instanceserver-local.ir-engine.org 00000.instanceserver-local.ir-engine.org 00001.instanceserver-local.ir-engine.org 00002.instanceserver-local.ir-engine.org 00003.instanceserver-local.ir-engine.org";
             }
         }
         
@@ -153,11 +153,11 @@ try {
         }
     }
     else {
-        Write-Host "*.etherealengine.org & microk8s.registry host entries needs to be created";
+        Write-Host "*.ir-engine.org & microk8s.registry host entries needs to be created";
         
         $EXITCODE = 1
         if ($IS_READONLY -eq $false) {
-            Set-Content $hostFilePath "`n$wslIp local.etherealengine.org api-local.etherealengine.org instanceserver-local.etherealengine.org 00000.instanceserver-local.etherealengine.org 00001.instanceserver-local.etherealengine.org 00002.instanceserver-local.etherealengine.org 00003.instanceserver-local.etherealengine.org`n$wslIp microk8s.registry";
+            Set-Content $hostFilePath "`n$wslIp local.ir-engine.org api-local.ir-engine.org instanceserver-local.ir-engine.org 00000.instanceserver-local.ir-engine.org 00001.instanceserver-local.ir-engine.org 00002.instanceserver-local.ir-engine.org 00003.instanceserver-local.ir-engine.org`n$wslIp microk8s.registry";
         }
     }
     

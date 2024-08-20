@@ -18,7 +18,7 @@ const AdditionalConfigsView = ({ localFlags, onChange, sx }: Props) => {
         label={
           <Box sx={{ display: 'flex', alignItems: 'top', flexDirection: 'row' }}>
             <Typography variant="body2">{Storage.SHOW_ALL_BRANCHES.replaceAll('_', ' ')}</Typography>
-            <InfoTooltip message="This will show all Ethereal Engine branches. If switched off then it will show only dev & master branches." />
+            <InfoTooltip message="This will show all Infinite Reality Engine branches. If switched off then it will show only dev & master branches." />
           </Box>
         }
         sx={{ marginTop: 1, marginLeft: 0 }}

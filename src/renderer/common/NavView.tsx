@@ -140,7 +140,7 @@ const NavView = () => {
         <Toolbar>
           <Box sx={{ display: { xs: 'none', md: 'flex' }, mr: 6, alignItems: 'center', flexDirection: 'row' }}>
             <Box sx={{ height: 45, mr: 0.7 }} component="img" src={logo} />
-            <Typography variant="h6">Control Center</Typography>
+            <Typography variant="h6">Launcher</Typography>
           </Box>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -182,7 +182,7 @@ const NavView = () => {
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, alignItems: 'center', flexDirection: 'row' }}>
             <Box sx={{ height: 45, mr: 0.7 }} component="img" src={logo} />
-            <Typography variant="h6">Control Center</Typography>
+            <Typography variant="h6">Launcher</Typography>
           </Box>
 
           <IconButton sx={{ mr: 2 }} onClick={() => ConfigFileService.setSelectedClusterId('')}>

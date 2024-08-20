@@ -51,7 +51,7 @@ class Workloads {
 
       const configMap = await getConfigMap(
         k8DefaultClient,
-        `app.kubernetes.io/instance=${releaseName},app.kubernetes.io/component=api,app.kubernetes.io/name=etherealengine`
+        `app.kubernetes.io/instance=${releaseName},app.kubernetes.io/component=api,app.kubernetes.io/name=ir-engine`
       )
 
       let appHost = configMap.length > 0 && configMap[0].data && configMap[0].data['CLIENT_ADDRESS']
@@ -92,7 +92,7 @@ class Workloads {
 
       const apiDeploys = await getDeployments(
         k8AppsClient,
-        `app.kubernetes.io/component=api,app.kubernetes.io/name=etherealengine`
+        `app.kubernetes.io/component=api,app.kubernetes.io/name=ir-engine`
       )
 
       for (const item of apiDeploys?.body.items || []) {
@@ -200,12 +200,12 @@ class Workloads {
 
       kc.loadFromFile(configPath)
 
-      const contextExists = kc.getContextObject('etherealengine-microk8s')
+      const contextExists = kc.getContextObject('ir-engine-microk8s')
       if (!contextExists) {
         throw 'Unable to find microK8s config'
       }
 
-      kc.setCurrentContext('etherealengine-microk8s')
+      kc.setCurrentContext('ir-engine-microk8s')
     } else if (cluster.type === ClusterType.Custom) {
       let typeValue = ''
 

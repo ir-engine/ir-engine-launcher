@@ -38,8 +38,8 @@ export const MicroK8sAppsStatus = (sudoPassword?: string): AppModel[] => {
     getAppModel('make', 'Make', 'make --version;'),
     getAppModel('docker', 'Docker', 'docker --version;'),
     getAppModel('dockercompose', 'Docker Compose', 'docker-compose --version;'),
-    getAppModel('mysql', 'MySql', 'docker top etherealengine_minikube_db;'),
-    getAppModel('minio', 'MinIO', 'docker top etherealengine_minio_s3;'),
+    getAppModel('mysql', 'MySql', 'docker top ir-engine_minikube_db;'),
+    getAppModel('minio', 'MinIO', 'docker top ir-engine_minio_s3;'),
     getAppModel('kubectl', 'kubectl', 'kubectl version --client --output=yaml;'),
     getAppModel('helm', 'Helm', 'helm version;'),
     getAppModel(
@@ -70,14 +70,14 @@ export const MicroK8sAppsStatus = (sudoPassword?: string): AppModel[] => {
         if ($wslIp -like "* *") {
           $wslIp = $wslIp.split(" ")[0]
   
-          if ($content -like "*local.etherealengine.org*") {
+          if ($content -like "*local.ir-engine.org*") {
             if ($content -like "*$wslIp*") {
-                Write-Host "*.etherealengine.org entries exists"
+                Write-Host "*.ir-engine.org entries exists"
             } else {
-                throw "*.etherealengine.org entries outdated"
+                throw "*.ir-engine.org entries outdated"
             }
           } else {
-            throw "*.etherealengine.org entries does not exist"
+            throw "*.ir-engine.org entries does not exist"
           }
   
           if ($content -like "*microk8s.registry*") {
@@ -95,16 +95,16 @@ export const MicroK8sAppsStatus = (sudoPassword?: string): AppModel[] => {
         `
         : microk8sDependantScript(
             `
-        if grep -q 'local.etherealengine.org' /etc/hosts; then
-            if grep -q '127.0.0.1 local.etherealengine.org' /etc/hosts; then
-                echo '*.etherealengine.org entries exists'
+        if grep -q 'local.ir-engine.org' /etc/hosts; then
+            if grep -q '127.0.0.1 local.ir-engine.org' /etc/hosts; then
+                echo '*.ir-engine.org entries exists'
                 exit 0;
             else
-              echo '*.etherealengine.org entries outdated' >&2;
+              echo '*.ir-engine.org entries outdated' >&2;
               exit 1;
             fi
         else
-          echo '*.etherealengine.org entries does not exist' >&2;
+          echo '*.ir-engine.org entries does not exist' >&2;
           exit 1;
         fi
       `,
@@ -112,7 +112,7 @@ export const MicroK8sAppsStatus = (sudoPassword?: string): AppModel[] => {
           ),
       type !== 'Windows_NT'
     ),
-    getAppModel('engine', 'Ethereal Engine', microk8sDependantScript(`helm status local;`, microk8sPrefix))
+    getAppModel('engine', 'Infinite Reality Engine', microk8sDependantScript(`helm status local;`, microk8sPrefix))
   ]
 
   if (type === 'Windows_NT') {

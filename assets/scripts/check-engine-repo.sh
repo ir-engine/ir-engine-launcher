@@ -14,17 +14,17 @@ OPS_FOLDER=$2
 #=============
 
 if [[ -d $OPS_FOLDER ]]; then
-    echo "ethereal engine ops repo exists at $OPS_FOLDER"
+    echo "iR engine ops repo exists at $OPS_FOLDER"
 else
-    echo "cloning ethereal engine ops in $OPS_FOLDER"
-    git clone https://github.com/etherealengine/ethereal-engine-ops "$OPS_FOLDER"
+    echo "cloning iR engine ops in $OPS_FOLDER"
+    git clone https://github.com/ir-engine/ir-engine-ops "$OPS_FOLDER"
 fi
 
 if [[ -d $ENGINE_FOLDER ]] && [[ -f "$ENGINE_FOLDER/package.json" ]]; then
-    echo "ethereal engine repo exists at $ENGINE_FOLDER"
+    echo "iR engine repo exists at $ENGINE_FOLDER"
 else
-    echo "cloning ethereal engine in $ENGINE_FOLDER"
-    git clone https://github.com/etherealengine/etherealengine "$ENGINE_FOLDER"
+    echo "cloning iR engine in $ENGINE_FOLDER"
+    git clone https://github.com/ir-engine/ir-engine "$ENGINE_FOLDER"
 fi
 
 cd "$ENGINE_FOLDER" || exit

@@ -1,11 +1,11 @@
 {
-  "name": "etherealengine-control-center",
+  "name": "ir-engine-launcher",
   "version": "0.4.6",
-  "description": "A desktop app for managing Ethereal Engine cluster.",
+  "description": "A desktop app for managing Infinite Reality Engine cluster.",
   "license": "MIT",
   "author": {
-    "name": "Ethereal Engine",
-    "email": "hello@etherealengine.org",
+    "name": "Infinite Reality Engine",
+    "email": "hello@ir-engine.org",
     "url": "https://etherealengine.org"
   },
   "main": "./dist/main/main.js",

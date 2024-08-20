@@ -52,7 +52,7 @@ export const getWorkloads = async (k8DefaultClient: k8s.CoreV1Api, releaseName: 
 
     const projectUpdatePods = await getPodsData(
       k8DefaultClient,
-      `etherealengine/release=${releaseName},etherealengine/projectUpdater=true`,
+      `ir-engine/release=${releaseName},ir-engine/projectUpdater=true`,
       'projectUpdate',
       'Project Updater'
     )

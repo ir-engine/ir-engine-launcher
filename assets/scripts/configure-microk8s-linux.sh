@@ -38,7 +38,7 @@ if [[ -z $ASSETS_FOLDER || -z $CONFIGS_FOLDER || -z $FORCE_DB_REFRESH || -z $ENG
     exit 1
 fi
 
-echo "Starting Ethereal Engine configuration for MicroK8s"
+echo "Starting iR Engine configuration for MicroK8s"
 
 echo "Cluster ID: ${CLUSTER_ID}"
 echo "Force DB Refresh: ${FORCE_DB_REFRESH}"
@@ -237,12 +237,12 @@ echo "KUBECONFIG is $KUBECONFIG"
 #================
 
 ADD_DOMAIN=false
-if grep -q "local.etherealengine.org" /etc/hosts; then
-    if grep -q "127.0.0.1 local.etherealengine.org" /etc/hosts; then
-        echo "*.etherealengine.org entries exists"
+if grep -q "local.ir-engine.org" /etc/hosts; then
+    if grep -q "127.0.0.1 local.ir-engine.org" /etc/hosts; then
+        echo "*.ir-engine.org entries exists"
     else
-        echo "*.etherealengine.org entries outdated"
-        grep -v 'local.etherealengine.org' /etc/hosts >/tmp/hosts.tmp
+        echo "*.ir-engine.org entries outdated"
+        grep -v 'local.ir-engine.org' /etc/hosts >/tmp/hosts.tmp
         echo "$PASSWORD" | sudo -S cp /tmp/hosts.tmp /etc/hosts
         ADD_DOMAIN=true
     fi
@@ -251,8 +251,8 @@ else
 fi
 
 if $ADD_DOMAIN; then
-    echo "$PASSWORD" | sudo -S -- sh -c "echo '127.0.0.1 local.etherealengine.org api-local.etherealengine.org instanceserver-local.etherealengine.org 00000.instanceserver-local.etherealengine.org 00001.instanceserver-local.etherealengine.org 00002.instanceserver-local.etherealengine.org 00003.instanceserver-local.etherealengine.org' >>/etc/hosts"
-    echo "*.etherealengine.org entries added"
+    echo "$PASSWORD" | sudo -S -- sh -c "echo '127.0.0.1 local.ir-engine.org api-local.ir-engine.org instanceserver-local.ir-engine.org 00000.instanceserver-local.ir-engine.org 00001.instanceserver-local.ir-engine.org 00002.instanceserver-local.ir-engine.org 00003.instanceserver-local.ir-engine.org' >>/etc/hosts"
+    echo "*.ir-engine.org entries added"
 fi
 
 #==================
@@ -292,7 +292,7 @@ echo "Tag is $TAG"
 checkExitCode
 
 #=======================
-# Verify Ethereal Engine
+# Verify iR Engine
 #=======================
 
 bash "$SCRIPTS_FOLDER/check-engine-deployment.sh" "$ENGINE_FOLDER" "$FORCE_DB_REFRESH" "$CONFIGS_FOLDER" "$CLUSTER_ID" "microk8s" "$OPS_FOLDER" "$TAG"

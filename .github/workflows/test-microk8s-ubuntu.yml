@@ -30,15 +30,15 @@ jobs:
           ASSETS_PATH="$GITHUB_WORKSPACE/assets"
           CONFIGS_PATH="/home/runner/opt/config"
           FORCE_DB_REFRESH=true
-          ENGINE_PATH="/home/runner/opt/etherealengine"
+          ENGINE_PATH="/home/runner/opt/ir-engine"
           CLUSTER_ID=test
-          OPS_PATH="/home/runner/opt/ethereal-engine-ops"
+          OPS_PATH="/home/runner/opt/ir-engine-ops"
           PASSWORD= # Github actions run in password-less sudo mode.
           ENABLE_RIPPLE_STACK=false
 
           mkdir -p "$CONFIGS_PATH"
-          curl https://raw.githubusercontent.com/EtherealEngine/ethereal-engine-ops/master/configs/local.microk8s.template.values.yaml -o "$CONFIGS_PATH/test-engine.values.yaml"
-          sed -i "s,^\([[:space:]]*hostUploadFolder:\).*,\1 '/home/runner/opt/etherealengine/packages/server/upload'," "$CONFIGS_PATH/test-engine.values.yaml"
+          curl https://raw.githubusercontent.com/ir-engine/ir-engine-ops/master/configs/local.microk8s.template.values.yaml -o "$CONFIGS_PATH/test-engine.values.yaml"
+          sed -i "s,^\([[:space:]]*hostUploadFolder:\).*,\1 '/home/runner/opt/ir-engine/packages/server/upload'," "$CONFIGS_PATH/test-engine.values.yaml"
 
           bash "$ASSETS_PATH/scripts/configure-microk8s-linux.sh" \
           -a "$ASSETS_PATH" \

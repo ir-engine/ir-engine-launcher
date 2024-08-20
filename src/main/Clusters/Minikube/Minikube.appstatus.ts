@@ -20,8 +20,8 @@ export const MinikubeAppsStatus: AppModel[] = [
   getAppModel('git', 'Git', 'git --version;'),
   getAppModel('docker', 'Docker', 'docker --version;'),
   getAppModel('dockercompose', 'Docker Compose', 'docker-compose --version;'),
-  getAppModel('mysql', 'MySql', 'docker top etherealengine_minikube_db;'),
-  getAppModel('minio', 'MinIO', 'docker top etherealengine_minio_s3;'),
+  getAppModel('mysql', 'MySql', 'docker top ir-engine_minikube_db;'),
+  getAppModel('minio', 'MinIO', 'docker top ir-engine_minio_s3;'),
   getAppModel('virtualbox', 'VirtualBox', 'vboxmanage --version;'),
   getAppModel('kubectl', 'kubectl', 'kubectl version --client --output=yaml;'),
   getAppModel('helm', 'Helm', 'helm version;'),
@@ -41,22 +41,22 @@ export const MinikubeAppsStatus: AppModel[] = [
     minikubeDependantScript(
       `
       MINIKUBE_IP=$(minikube ip)
-      if grep -q "local.etherealengine.org" /etc/hosts; then
+      if grep -q "local.ir-engine.org" /etc/hosts; then
           if grep -q "$MINIKUBE_IP" /etc/hosts; then
-              echo "*.etherealengine.org entries exists";
+              echo "*.ir-engine.org entries exists";
               exit 0;
           else
-              echo "*.etherealengine.org entries outdated" >&2;
+              echo "*.ir-engine.org entries outdated" >&2;
               exit 1;
           fi
       else
-        echo "*.etherealengine.org entries does not exist" >&2;
+        echo "*.ir-engine.org entries does not exist" >&2;
         exit 1;
       fi
     `
     )
   ),
-  getAppModel('engine', 'Ethereal Engine', minikubeDependantScript('helm status local;'))
+  getAppModel('engine', 'Infinite Reality Engine', minikubeDependantScript('helm status local;'))
 ]
 
 export const MinikubeRippleAppsStatus: AppModel[] = [

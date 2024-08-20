@@ -94,7 +94,7 @@ const DeploymentView = ({ localConfigs, onChange, sx }: Props) => {
                 <br />
                 <br />
                 Release name is used to prefix the workloads in your cluster like:
-                <br />'{'{RELEASE_NAME}'}-etherealengine-client'. i.e. 'prod-etherealengine-client'
+                <br />'{'{RELEASE_NAME}'}-ir-engine-client'. i.e. 'prod-ir-engine-client'
               </Typography>
             }
           />

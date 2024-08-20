@@ -109,7 +109,7 @@ const MokRestartDialog = ({ onClose }: Props) => {
           </Box>
           <Box sx={{ display: 'flex', alignItems: 'flex-start', flexDirection: 'column', mt: 1 }}>
             <Typography variant="body2">
-              After rebooting you can run 'Configure' button in Ethereal Engine Control Center again
+              After rebooting you can run 'Configure' button in Infinite Reality Engine Launcher again
             </Typography>
           </Box>
           <Box sx={{ display: 'flex', alignItems: 'flex-start', flexDirection: 'column', mt: 1 }}>

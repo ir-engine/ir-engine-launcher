@@ -13,7 +13,7 @@ ENGINE_FOLDER=$2
 # Ensure DB and Redis Running
 #============================
 
-if docker top etherealengine_minikube_db; then
+if docker top ir-engine_minikube_db; then
     echo "mysql is running"
 else
     echo "mysql is not running"

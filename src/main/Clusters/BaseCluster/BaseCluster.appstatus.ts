@@ -10,12 +10,12 @@ export const DefaultEngineStatus: AppModel[] = [
   getAppModel(
     'client',
     'Client',
-    "kubectl get deployment local-etherealengine-client -o 'jsonpath={.status.availableReplicas}'"
+    "kubectl get deployment local-ir-engine-client -o 'jsonpath={.status.availableReplicas}'"
   ),
   getAppModel(
     'apiserver',
     'API Server',
-    "kubectl get deployment local-etherealengine-api -o 'jsonpath={.status.availableReplicas}'"
+    "kubectl get deployment local-ir-engine-api -o 'jsonpath={.status.availableReplicas}'"
   ),
   getAppModel(
     'instanceserver',

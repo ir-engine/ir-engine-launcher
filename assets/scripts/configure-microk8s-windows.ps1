@@ -79,7 +79,7 @@ if ([string]::IsNullOrEmpty($ASSETS_FOLDER) -or
     exit 1
 }
 
-Write-Host "Starting Ethereal Engine configuration for MicroK8s in WSL";
+Write-Host "Starting iR Engine configuration for MicroK8s in WSL";
 
 Write-Host "Cluster ID: $CLUSTER_ID";
 Write-Host "Force DB Refresh: $FORCE_DB_REFRESH";
@@ -409,7 +409,7 @@ $TAG = wsl bash -ic "echo `$(jq -r .version `"$ENGINE_FOLDER/packages/server-cor
 Write-Host "Tag is $TAG";
 
 #=======================
-# Verify Ethereal Engine
+# Verify iR Engine
 #=======================
 
 wsl bash -ic "`"$SCRIPTS_FOLDER/check-engine-deployment.sh`" `"$ENGINE_FOLDER`" `"$FORCE_DB_REFRESH`" `"$CONFIGS_FOLDER`" `"$CLUSTER_ID`" `"microk8sWindows`" `"$OPS_FOLDER`" `"$TAG`"";

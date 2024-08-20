@@ -1,6 +1,6 @@
 {
-  "name": "etherealengine-control-center",
-  "description": "A desktop app for managing Ethereal Engine cluster.",
+  "name": "ir-engine-launcher",
+  "description": "A desktop app for launcher Infinite Reality Engine Deployments",
   "homepage": "etherealengine.org",
   "keywords": [
     "electron",
@@ -17,16 +17,16 @@
     "vr"
   ],
   "author": {
-    "name": "Ethereal Engine",
+    "name": "Infinite Reality Engine",
     "email": "hello@etherealengine.org",
     "url": "https://etherealengine.org"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/etherealengine/etherealengine-control-center.git"
+    "url": "git+https://github.com/ir-engine/ir-engine-launcher.git"
   },
   "bugs": {
-    "url": "https://github.com/etherealengine/etherealengine-control-center/issues"
+    "url": "https://github.com/ir-engine/ir-engine-launcher/issues"
   },
   "main": "./src/main/main.ts",
   "scripts": {
@@ -53,8 +53,8 @@
     ]
   },
   "build": {
-    "productName": "Ethereal Engine Control Center",
-    "appId": "org.etherealengine.controlcenter",
+    "productName": "iR Engine Launcher",
+    "appId": "org.irengine.launcher",
     "asar": true,
     "asarUnpack": "**\\*.{node,dll}",
     "files": [
@@ -112,8 +112,8 @@
     ],
     "publish": {
       "provider": "github",
-      "owner": "etherealengine",
-      "repo": "etherealengine-control-center"
+      "owner": "ir-engine",
+      "repo": "ir-engine-launcher"
     }
   },
   "jest": {
@@ -246,7 +246,7 @@
     "npm": ">=7.x"
   },
   "collective": {
-    "url": "https://opencollective.com/etherealengine"
+    "url": "https://opencollective.com/ir-engine"
   },
   "electronmon": {
     "patterns": [

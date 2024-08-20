@@ -90,7 +90,7 @@ const EngineView = ({ sx }: Props) => {
         throw stringError
       }
     } catch (err) {
-      enqueueSnackbar('Failed to remove Ethereal Engine deployment.', { variant: 'error' })
+      enqueueSnackbar('Failed to remove Infinite Reality Engine deployment.', { variant: 'error' })
     }
 
     setProcessingDeploymentPrune(false)
@@ -105,10 +105,10 @@ const EngineView = ({ sx }: Props) => {
       const enginePath = clonedCluster.configs[Storage.ENGINE_PATH]
 
       const command = `
-        docker container stop etherealengine_minikube_db;
-        docker container stop etherealengine_test_db;
-        docker container rm etherealengine_minikube_db;
-        docker container rm etherealengine_test_db;
+        docker container stop ir-engine_minikube_db;
+        docker container stop ir-engine_test_db;
+        docker container rm ir-engine_minikube_db;
+        docker container rm ir-engine_test_db;
         docker container prune --force;
         cd '${enginePath}';
         npm run dev-docker`
@@ -260,7 +260,7 @@ const EngineView = ({ sx }: Props) => {
           label={
             <Box sx={{ display: 'flex', alignItems: 'top', flexDirection: 'row' }}>
               <Typography variant="body2">RESET .ENV.LOCAL</Typography>
-              <InfoTooltip message="This will reset .env.local file in your Ethereal Engine local repo." />
+              <InfoTooltip message="This will reset .env.local file in your Infinite Reality Engine local repo." />
             </Box>
           }
           control={<></>}
@@ -285,7 +285,7 @@ const EngineView = ({ sx }: Props) => {
       {showDeploymentAlert && (
         <AlertDialog
           title="Confirmation"
-          message="Are you sure you want to proceed? This will remove the Ethereal Engine deployment from your current cluster."
+          message="Are you sure you want to proceed? This will remove the Infinite Reality Engine deployment from your current cluster."
           okButtonText="Proceed"
           onClose={() => setDeploymentAlert(false)}
           onOk={onPruneDeployment}
@@ -303,7 +303,7 @@ const EngineView = ({ sx }: Props) => {
       {showEnvAlert && (
         <AlertDialog
           title="Confirmation"
-          message="Are you sure you want to proceed? This will reset .env.local file in your Ethereal Engine local repo."
+          message="Are you sure you want to proceed? This will reset .env.local file in your Infinite Reality Engine local repo."
           okButtonText="Proceed"
           onClose={() => setEnvAlert(false)}
           onOk={onResetEnv}

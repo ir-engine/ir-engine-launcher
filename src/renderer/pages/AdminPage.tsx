@@ -43,7 +43,7 @@ const AdminPage = () => {
 
   let loadingMessage = ''
   if (checking) {
-    loadingMessage = 'Checking Ethereal Engine'
+    loadingMessage = 'Checking Infinite Reality Engine'
   } else if (currentDeployment?.adminPanel.loading) {
     loadingMessage = 'Loading Dashboard'
   }
@@ -52,8 +52,8 @@ const AdminPage = () => {
   let errorDetail = ''
   let errorRetry = () => {}
   if (!allConfigured) {
-    errorMessage = 'Ethereal Engine Not Configured'
-    errorDetail = 'Please configure Ethereal Engine before trying again.'
+    errorMessage = 'Infinite Reality Engine Not Configured'
+    errorDetail = 'Please configure Infinite Reality Engine before trying again.'
     errorRetry = () => DeploymentService.fetchDeploymentStatus(selectedCluster)
   } else if (currentDeployment?.adminPanel.error) {
     errorMessage = 'Admin Panel Error'

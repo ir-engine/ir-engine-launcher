@@ -104,7 +104,7 @@ class ConfigFile {
     try {
       const { filePaths } = await dialog.showOpenDialog({
         properties: ['openFile'],
-        filters: [{ name: 'Control Center Config File', extensions: ['json'] }]
+        filters: [{ name: 'Launcher Config File', extensions: ['json'] }]
       })
 
       if (filePaths.length === 0) {
